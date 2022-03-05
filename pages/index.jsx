@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Banner from '../components/banner';
+import Image from 'next/image';
 
 export default function Home() {
   const handleOnClick = () => {
@@ -16,6 +17,9 @@ export default function Home() {
 
       <main className={styles.main}>
         <Banner buttonText={'Coffee Good!'} handleOnClick={handleOnClick} />
+        <div className={styles.heroImage}>
+          <Image src='/static/hero-image.png' height={400} width={1000} />
+        </div>
       </main>
     </div>
   );
